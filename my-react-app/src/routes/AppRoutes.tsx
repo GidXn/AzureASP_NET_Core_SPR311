@@ -6,6 +6,7 @@ import MainLayout from "../layouts/MainLayout.tsx";
 import NotFound from "../pages/NotFound.tsx";
 import UserView from "../pages/user/UserView.tsx";
 import CateogriesList from "../pages/categories/list";
+import IngredientsList from "../pages/ingredients/list";
 
 
 const AppRoutes: React.FC = () => {
@@ -20,6 +21,10 @@ const AppRoutes: React.FC = () => {
 
                 <Route path={"categories"}>
                     <Route index element={<CateogriesList />} />
+                </Route>
+
+                <Route path={"ingredients"}>
+                    <Route index element={<IngredientsList />} />
                 </Route>
 
             </Route>
