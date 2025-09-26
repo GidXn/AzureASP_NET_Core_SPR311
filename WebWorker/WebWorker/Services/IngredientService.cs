@@ -22,6 +22,20 @@ public class IngredientService(IMapper mapper,
         await context.SaveChangesAsync();
         return entity.Id;
     }
+
+    public async Task<IEnumerable<IngredientItemModel>> GetListAsync()
+    {
+        var query = context.Ingredients
+            .AsNoTracking()
+            .Select(x => new IngredientItemModel
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Image = x.Image
+            });
+
+        return await query.ToListAsync();
+    }
 }
 
 

@@ -19,6 +19,12 @@ const MainLayout: React.FC = () => {
                             Категорії
                         </Link>
                         <Link
+                            to="/ingredients"
+                            className="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
+                        >
+                            Інгредієнти
+                        </Link>
+                        <Link
                             to="/login"
                             className="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
                         >
